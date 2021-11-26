@@ -1,0 +1,16 @@
+{
+  "name": "validate",
+  "version": "0.0.0",
+  "description": "A streamlined form validation library",
+  "main": "index.js",
+  "scripts": {
+    "dev": ""
+  },
+  "keywords": [
+    "validate",
+    "simplify"
+  ],
+  "author": "Kanno",
+  "license": "MIT",
+  "devDependencies": {}
+}
