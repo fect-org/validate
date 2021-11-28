@@ -15,6 +15,7 @@ declare class Proy {
     options: ValidateOptions,
     callback?: ValidateCallBack
   ): Promise<Proy>;
+  produce(): void;
 }
 
 export declare const proy: () => Proy;

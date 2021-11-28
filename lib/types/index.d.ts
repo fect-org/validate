@@ -1,6 +1,7 @@
 export interface RuleItem {
   type?: string;
   required?: boolean;
+  validate?: () => void;
 }
 
 export type Rule = RuleItem | RuleItem[];

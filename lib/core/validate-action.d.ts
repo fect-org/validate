@@ -1,7 +1,8 @@
-import { Rules } from "../types/index";
+import { Rules, ValidateCallBack } from "../types/index";
 
 export declare const validateAction: (
   prop: string,
   value: any,
-  rule: Rules
+  rule: Rules,
+  callback?: ValidateCallBack
 ) => boolean;
