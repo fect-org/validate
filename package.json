@@ -4,6 +4,7 @@
   "description": "A streamlined form validation library",
   "main": "index.js",
   "scripts": {
+    "test": "nyc ava --verbose",
     "dev": ""
   },
   "keywords": [
@@ -18,8 +19,11 @@
   "author": "Kanno",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^3.15.0",
+    "coveralls": "^3.1.1",
     "eslint": "^8.3.0",
     "eslint-config-kagura": "^1.0.3",
+    "nyc": "^15.1.0",
     "prettier": "^2.5.0"
   }
 }

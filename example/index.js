@@ -1,4 +1,4 @@
-const { proy } = require("../lib");
+const { proy } = require('../lib')
 
 const descriptor = {
   // name: {
@@ -7,26 +7,26 @@ const descriptor = {
   // },
   age: [
     {
-      type: "number",
+      type: 'number',
       required: true,
     },
     {
-      type: "number",
+      type: 'number',
       required: true,
       validate: (val) => val >= 10,
     },
   ],
-};
+}
 const unVerified = {
   // "XeryYue"
   // name: "XeryYue",
   age: 11,
-};
+}
 
-const basic = proy();
+const basic = proy()
 const poxies = basic
   .descriptor(descriptor)
   .validte(unVerified, { block: true }, (err, fields) => {})
-  .produce();
+  .produce()
 
-console.log(poxies);
+console.log(poxies)
