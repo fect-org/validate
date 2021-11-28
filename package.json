@@ -1,6 +1,6 @@
 {
-  "name": "validate",
-  "version": "0.0.0",
+  "name": "proy",
+  "version": "0.0.1",
   "description": "A streamlined form validation library",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,12 @@
   },
   "keywords": [
     "validate",
+    "proy",
     "simplify"
+  ],
+  "files": [
+    "lib",
+    "README.md"
   ],
   "author": "Kanno",
   "license": "MIT",
