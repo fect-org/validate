@@ -1,21 +1,21 @@
 export interface RuleItem {
-  type?: string;
-  required?: boolean;
-  validate?: () => void;
+  type?: string
+  required?: boolean
+  validate?: () => void
 }
 
-export type Rule = RuleItem | RuleItem[];
+export type Rule = RuleItem | RuleItem[]
 
-export type Rules = Map<string, Rule>;
+export type Rules = Map<string, Rule>
 
 export interface ValidateErr {
-  message?: string;
-  sourceValue?: any;
-  targetValue?: any;
+  message?: string
+  sourceValue?: any
+  targetValue?: any
 }
 
 export interface ValidateOptions {
-  block?: boolean;
+  block?: boolean
 }
 
-export type ValidateCallBack = (err: any, fields: any) => void;
+export type ValidateCallBack = (err: any, fields: any) => void
