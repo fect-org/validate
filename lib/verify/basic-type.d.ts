@@ -1,9 +1,9 @@
-export declare const array: (val: any) => boolean;
+export declare const isArray: (val: any) => boolean;
 
-export declare const number: (val: any) => boolean;
+export declare const isNumber: (val: any) => boolean;
 
-export declare const object: (val: any) => boolean;
+export declare const isObject: (val: any) => boolean;
 
-export declare const string: (val: any) => boolean;
+export declare const isString: (val: any) => boolean;
 
-export declare const boolean: (val: any) => boolean;
+export declare const isBoolean: (val: any) => boolean;
