@@ -6,7 +6,7 @@ export interface RuleItem {
 
 export type Rule = RuleItem | RuleItem[]
 
-export type Rules = Map<string, Rule>
+export type Rules = Record<string, Rule>
 
 export interface ValidateErr {
   message?: string

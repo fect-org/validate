@@ -1,7 +1,7 @@
-import type { Rules, ValidateCallBack, ValidateOptions } from '../types'
+import type { Rule, Rules, ValidateCallBack, ValidateOptions } from './interface'
 
 declare class Proy {
-  private rules: Rules
+  private rules: Map<string, Rule>
   constructor(descriptor: Rules)
   validate(source: Record<string, any>, options?: ValidateOptions, callback?: ValidateCallBack): Proy
   descriptor(rule: Rules): Proy
