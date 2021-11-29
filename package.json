@@ -17,7 +17,8 @@
   "files": [
     "dist",
     "typings",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "author": "Kanno",
   "license": "MIT",

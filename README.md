@@ -4,6 +4,14 @@ A streamlined form validation library
 
 ### Quick Start
 
+```bash
+
+$ yarn add proy
+
+$ npm install proy
+
+```
+
 ### Usage
 
 ```js
@@ -20,7 +28,9 @@ const descriptor = {
 const basic = proy(descriptor)
 
 basic.validate({ name: 'XeryYue' }, (err, fields) => {
-  if (err) return err
+  if (err) {
+    errHandelr(err)
+  }
 })
 ```
 
@@ -34,6 +44,15 @@ function(source,(err,fields)):void
 
 ```
 
+- `source` : The object to validate (required).
+
+- `callback`: A callback function to invoke when validation completes .
+
+The `callback` will return a sync function
+
+- err: A error list
+- fields: A list of successfully verified data
+
 ### descriptor
 
 ```js
@@ -42,10 +61,21 @@ function(descriptor):Proy
 
 ```
 
-### Asyncvalidate
+- `descriptor` : entry your validate rule
+
+```js
+interface Rule {
+  type: 'string' | 'number' | 'boolean' | 'array' | 'object';
+  required?: boolean;
+  validate?: (val: any) => boolean;
+}
+```
 
 ### Procude
 
-```js
+- `produce` will interrupt the chain call.
+- `produce` will return successfully verified data , If un verifeid will return empty object .
 
-```
+### LICENSE
+
+[MIT](./LICENSE)
