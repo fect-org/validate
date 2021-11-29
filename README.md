@@ -46,9 +46,7 @@ function(source,(err,fields)):void
 
 - `source` : The object to validate (required).
 
-- `callback`: A callback function to invoke when validation completes .
-
-The `callback` will return a sync function
+- `callback`: A callback function to invoke when validation completes .The `callback` will return a sync function
 
 - err: A error list
 - fields: A list of successfully verified data
