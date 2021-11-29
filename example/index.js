@@ -26,7 +26,7 @@ const unVerified = {
 const basic = proy()
 const poxies = basic
   .descriptor(descriptor)
-  .validte(unVerified, { block: true }, (err, fields) => {})
+  .validate(unVerified, { block: true }, (err, fields) => {})
   .produce()
 
 console.log(poxies)

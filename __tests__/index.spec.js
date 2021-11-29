@@ -5,7 +5,7 @@ test('proy should provide source value when have not descriptor', (t) => {
   const basic = {
     name: 'test',
   }
-  const draft = proy().descriptor({}).validte(basic).produce()
+  const draft = proy().descriptor({}).validate(basic).produce()
   t.is(basic.name, draft.name)
 })
 
@@ -19,9 +19,9 @@ test('proy should provide a proxies object when validate error', (t) => {
       validate: (val) => val === 'kanno',
     },
   }
-  let draft = proy().descriptor(descriptor).validte(basic).produce()
+  let draft = proy().descriptor(descriptor).validate(basic).produce()
   t.is(draft.name, undefined)
   basic.name = 'kanno'
-  draft = proy().descriptor(descriptor).validte(basic).produce()
+  draft = proy().descriptor(descriptor).validate(basic).produce()
   t.is(draft.name, 'kanno')
 })
