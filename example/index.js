@@ -1,10 +1,10 @@
 const { proy } = require('../lib')
 
 const descriptor = {
-  // name: {
-  //   type: "string",
-  //   // required: true,
-  // },
+  name: {
+    type: 'string',
+    required: true,
+  },
   age: [
     {
       type: 'number',
@@ -19,14 +19,15 @@ const descriptor = {
 }
 const unVerified = {
   // "XeryYue"
-  // name: "XeryYue",
+  name: null,
   age: 11,
 }
 
 const basic = proy()
 const poxies = basic
   .descriptor(descriptor)
-  .validate(unVerified, { block: true }, (err, fields) => {})
+  .validate(unVerified, (err, fields) => {
+    console.log(err)
+    console.log(fields)
+  })
   .produce()
-
-console.log(poxies)

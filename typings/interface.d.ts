@@ -1,5 +1,6 @@
+export type ValidateType = 'array' | 'number' | 'object' | 'string' | 'boolean'
 export interface RuleItem {
-  type?: string
+  type?: ValidateType
   required?: boolean
   validate?: () => void
 }
