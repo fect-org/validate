@@ -6,7 +6,7 @@ declare class Proy {
   constructor(descriptor: Rules)
   validate(source: Record<string, any>, options?: ValidateOptions, callback?: ValidateCallBack): Proy
   descriptor(rule: Rules): Proy
-  asyncValidate(source, callback?: ValidateCallBack): Promise<Proy>
+  // asyncValidate(source, callback?: ValidateCallBack): Promise<Proy>
   produce(): void
 }
 
