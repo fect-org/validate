@@ -2,6 +2,7 @@ export type ValidateType = 'array' | 'number' | 'object' | 'string' | 'boolean'
 export interface RuleItem {
   type?: ValidateType
   required?: boolean
+  message?: string
   validate?: (val) => boolean
 }
 
@@ -20,4 +21,4 @@ export interface CallbackErrors {
   errLog: string
 }
 
-export type ValidateCallBack = (err?: CallbackErrors[], fields?: Record<string, any>) => void
+export type ValidateCallBack = (err: [] | CallbackErrors[], fields: Record<string, any>) => void
