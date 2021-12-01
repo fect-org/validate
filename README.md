@@ -1,8 +1,8 @@
 # Proy
 
-A streamlined form validation library
+A streamlined form validation library , base on `proxy` .
 
-### Quick Start
+## Install
 
 ```bash
 
@@ -12,7 +12,7 @@ $ npm install proy
 
 ```
 
-### Usage
+## Usage
 
 ```js
 import { proy } from 'proy'
@@ -29,19 +29,23 @@ const basic = proy(descriptor)
 
 basic.validate({ name: 'XeryYue' }, (err, fields) => {
   if (err) {
-    errHandelr(err)
+    console.log(err)
   }
 })
 ```
 
-### API
+## API
 
 #### Validate
 
+Pass in the object to be verified . If you want to catch the error, you can also pass in a `callback` function
+
 ```js
+type ValidateCallBack = (err: [] | CallbackErrors[], fields: Record<string, any>) => void
 
-function(source,(err,fields)):void
-
+interface Validate {
+  (source:Record<string,any>,callback?ValidateCallBack):Proy
+}
 ```
 
 - `source` : The object to validate (required).
@@ -53,21 +57,21 @@ function(source,(err,fields)):void
 
 ### descriptor
 
-```js
-
-function(descriptor):Proy
-
-```
-
 - `descriptor` : entry your validate rule
 
 ```js
 interface Rule {
   type: 'string' | 'number' | 'boolean' | 'array' | 'object';
   required?: boolean;
+  message?: string;
   validate?: (val: any) => boolean;
 }
 ```
+
+- `type` Specify the type to be verified
+- `required` Is it required
+- `message` Custom error message , if you don't set this field , will use default error message
+- `validate` Custom check
 
 ### Procude
 
