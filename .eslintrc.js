@@ -5,5 +5,10 @@ module.exports = {
     node: true,
   },
   root: true,
-  extends: ['kagura'],
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    ecmaVersion: 2021,
+    sourceType: 'module',
+  },
+  extends: ['plugin:@typescript-eslint/recommended', 'kagura'],
 }

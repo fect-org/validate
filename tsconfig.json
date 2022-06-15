@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "importHelpers": true,
+        "baseUrl": ".",
+        "module": "CommonJS",
+        "esModuleInterop": true
+    },
+    "include": ["src"]
+}
